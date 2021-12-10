@@ -9,6 +9,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ListeComponent } from './liste/liste.component';
 import { GestionComponent } from './gestion/gestion.component';
 import { ContactComponent } from './contact/contact.component';
+import { MovieComponent } from './movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     ListeComponent,
     GestionComponent,
     ContactComponent
+    MovieComponent
   ],
   imports: [
     BrowserModule,
