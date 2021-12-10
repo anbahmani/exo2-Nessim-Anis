@@ -8,7 +8,9 @@ import { Film } from '../modele/film';
 })
 export class ListeComponent implements OnInit {
 
-	public films:Film[] = [
+	public	selectedMovieIndex : number = -1;
+
+	public films : Film[] = [
 		{
 		  name: 'Les méchants',
 		  poster: '/assets/les_mechants.jpeg',
@@ -39,6 +41,10 @@ export class ListeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public setSelectedMovieIndex(index : number) : void{
+	  this.selectedMovieIndex = index;
   }
 
 }

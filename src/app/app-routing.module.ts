@@ -8,7 +8,8 @@ const routes: Routes = [
 	{path:'accueil', component: AccueilComponent},
 	{path:'liste', component: ListeComponent},
 	{path:'gestion', component: GestionComponent},
-	{path:'', redirectTo:'/accueil', pathMatch:'full'}
+	{path:'', redirectTo:'/accueil', pathMatch:'full'}, 
+	{path:'**', redirectTo:'/accueil'}
 ];
 
 @NgModule({
