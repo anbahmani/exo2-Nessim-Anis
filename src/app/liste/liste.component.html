@@ -1,9 +1,6 @@
 <div class="text-center justify-content-center">
 	<ul class="mx-auto list-group w-25 justify-content-center">
-		<li class="list-group-item justify-content-center" *ngFor="let film of films; let indexMovie = index"><a (click)="setSelectedMovieIndex(indexMovie)">{{film.link}}</a></li> 
+		<li class="list-group-item justify-content-center" *ngFor="let film of films; let indexMovie = index"><button type="button" class="btn btn-link" (click)="setSelectedFilm(indexMovie)">{{film.link}}</button></li> 
 	</ul>
-	<div *ngIf="selectedMovieIndex != -1">
-		<p>{{films[selectedMovieIndex].name}}</p>
-		<img src={{films[selectedMovieIndex].poster}}>
-	</div>
+	<div class =  "mb-5" ><app-film [film]="selectedFilm"></app-film></div>
 </div>
