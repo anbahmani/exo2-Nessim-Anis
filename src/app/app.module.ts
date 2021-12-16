@@ -10,6 +10,8 @@ import { ListeComponent } from './liste/liste.component';
 import { GestionComponent } from './gestion/gestion.component';
 import { ContactComponent } from './contact/contact.component';
 import { FilmComponent } from './film/film.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { FilmComponent } from './film/film.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+	ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

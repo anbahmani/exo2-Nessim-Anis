@@ -1,0 +1,11 @@
+<form [formGroup] = "contactForm" (ngSubmit)="onSubmit()">
+	<input type="Text" class="form-control" id="firstName" placeholder="Prenom" formControlName="firstName">
+	<input type="Text" class="form-control" id="lastName" placeholder="Nom" formControlName="lastName">
+	<input type="Text" class="form-control" id="age" placeholder="Age" formControlName="age">
+	<input type="Text" class="form-control" id="mail" placeholder="Mail" formControlName="mail">
+	<div class="form-check">
+		<input mdbCheckbox class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+		<label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+	</div>
+	<input type="Text" class="form-control" id="comment" placeholder="Commentaire" formControlName="Comment">
+</form>
