@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { User } from '../modele/user';
+import { UserService } from '../services/userService';
 
 @Component({
   selector: 'app-gestion',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionComponent implements OnInit {
 
-  constructor() { }
+  tabUser :User[]=[];
+  userSubscription: Subscription = new Subscription;
 
-  ngOnInit(): void {
+  constructor(private userService: UserService) { }
+
+  ngOnInit() {
+    this.userSubscription = this.userService.userSubject.subscribe(
+      (users: User[]) => {
+        this.tabUser = users;
+      }
+    );
+    this.userService.emitUsers();
   }
+
+  ngOnDestroy() {
+    this.userSubscription.unsubscribe();
+  }
+
 
 }

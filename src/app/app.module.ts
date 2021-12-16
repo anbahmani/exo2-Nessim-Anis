@@ -11,6 +11,7 @@ import { GestionComponent } from './gestion/gestion.component';
 import { ContactComponent } from './contact/contact.component';
 import { FilmComponent } from './film/film.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './services/userService';
 
 
 @NgModule({
@@ -27,9 +28,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-	ReactiveFormsModule
+	ReactiveFormsModule,
+  FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
