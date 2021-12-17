@@ -7,6 +7,6 @@
 		<input type="checkbox" class="form-check-input" (change)="hideMail($event)" value="hide" id="flexCheckDefault">
 		<label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
 	</div>
-	<input type="Text" class="form-control" id="comment" placeholder="Commentaire" formControlName="Comment">
-	<input type="submit" [disabled]="contactForm.invalid" >
+	<input type="Text" class="form-control" id="comment" placeholder="Commentaire" formControlName="comment">
+	<button type="submit" [disabled]="contactForm.invalid" >Envoyer</button>
 </form>

@@ -21,11 +21,11 @@ export class ContactComponent implements OnInit {
 
    initForm() {
     this.contactForm = this.fb.group({
-      firstName : ['', Validators.required] ,
-      lastName :['',Validators.required] ,
-      age :['',Validators.required] ,
+      firstName : ['', [Validators.required]] ,
+      lastName :['',[Validators.required]] ,
+      age :['',[Validators.required]] ,
       mail:['',[Validators.required,Validators.email]],
-      comment:['',Validators.required]
+      comment:['',[Validators.required]],
       });
    }
 
