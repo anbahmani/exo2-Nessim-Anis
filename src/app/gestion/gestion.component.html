@@ -1,10 +1,18 @@
+<div class="text-center justify-content-center">
+<h3> Informations de gestion des contacts </h3>
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let user of tabUser">
       <div *ngIf ="tabUser?.length !=0">
-        <h4>{{user.firstName}} {{user.lastName}}</h4>
-        <p>{{user.age}}</p>
-        <p>{{user.mail}}</p>
-        <p>{{user.comment}}</p> 
+        <p> <b>Prénom, Nom : </b>{{user.firstName}} {{user.lastName}}</p>
+        <p><b>Age : </b>{{user.age}} ans</p>
+        <p *ngIf="user?.mail not null"><b>Adresse électronique : </b>{{user.mail}}</p>
+        <p><b>Commentaires : </b>{{user.comment}}</p> 
       </div>
     </li>
-  </ul>
+</ul>
+</div>
+
+<div *ngIf ="tabUser?.length ==0"  class="text-center justify-content-center" >
+  <br><br>
+  <h5> Aucun formulaire envoyé pour le moment. </h5>
+</div>
